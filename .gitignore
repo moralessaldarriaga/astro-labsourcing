@@ -1,0 +1,34 @@
+# ⚙️ Node modules
+node_modules/
+.package-lock.json
+
+# 🏗️ Carpeta de build
+dist/
+
+# 📦 Archivos temporales de Astro
+.astro/
+
+# 🛠️ Configuraciones de sistema / entorno
+.env
+.env.*.local
+.DS_Store
+
+# 🧪 Testing / coverage
+coverage/
+
+# 💻 Configuraciones del editor
+.vscode/
+.idea/
+
+# 📦 Archivos de lock alternativos
+pnpm-lock.yaml
+yarn.lock
+
+# 🚫 Archivos de logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 🚀 Archivos de subida (si usás Netlify o similares)
+.netlify/
+.vercel/

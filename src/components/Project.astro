@@ -1,0 +1,48 @@
+---
+import ProjectImage from '../assets/cemento-sol-wp.png';
+import { Image } from 'astro:assets';
+---
+
+<section id="proyectos" class="py-24 space-y-8">
+    <div class="w-11/12 mx-auto">
+      <div>
+        <h2 class="text-fluid-xl font-normal mb-8">Recent projects</h2>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <a href="/proyectos/proyecto-1">
+          <div class="relative aspect-4/3 bg-slate-200 rounded-3xl mb-4 overflow-hidden">
+            <Image
+              src={ProjectImage}
+              alt="Project 1"
+              widths={[400, 800, 1200]}
+              formats={['webp', 'avif']}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="object-cover"
+            />
+          </div>
+          <div class="relative text-fluid-sm">
+            <h3 class="inline font-semibold">Project title</h3>
+            <span class="inline"> — </span>
+            <p class="inline">Accelerating your next big discovery</p>
+          </div>
+        </a>
+        <a href="/proyectos/proyecto-1">
+          <div class="relative aspect-4/3 bg-slate-200 rounded-3xl mb-4 overflow-hidden">
+            <Image
+              src={ProjectImage}
+              alt="Project 1"
+              widths={[400, 800, 1200]}
+              formats={['webp', 'avif']}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="object-cover"
+            />
+          </div>
+          <div class="relative text-fluid-sm">
+            <h3 class="inline font-semibold">Project title</h3>
+            <span class="inline"> — </span>
+            <p class="inline">Accelerating your next big discovery</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
