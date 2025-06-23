@@ -18,6 +18,7 @@ export default {
       },
       fontFamily: {
         reviewcondensed: ['Review Condensed', 'sans-serif'],
+        spaceMono: ['"Space Mono"', 'monospace'],
       },
     },
   },

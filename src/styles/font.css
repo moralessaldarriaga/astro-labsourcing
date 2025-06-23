@@ -1,20 +1,20 @@
-@font-face {
+/* @font-face {
     font-family: 'Review Condensed';
     src: url('/fonts/ReviewCondensed/ReviewCondensed-Medium.woff2') format('woff2'),
         url('/fonts/ReviewCondensed/ReviewCondensed-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
-}
+} */
 
-@font-face {
+/* @font-face {
     font-family: 'Review Condensed';
     src: url('/fonts/ReviewCondensed/ReviewCondensed-Light.woff2') format('woff2'),
         url('/fonts/ReviewCondensed/ReviewCondensed-Light.woff') format('woff');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
-}
+} */
 
 @font-face {
     font-family: 'Review Condensed';
@@ -33,4 +33,5 @@
     font-style: normal;
     font-display: swap;
 }
+
 
