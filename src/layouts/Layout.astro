@@ -3,15 +3,21 @@ import Navbar from '../components/Navbar.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import '../styles/global.css';
+
+// Variables de SEO
+const title = Astro.props.title ? Astro.props.title : 'Lab+sourcing';
+const description = Astro.props.description ? Astro.props.description : 'Lab+sourcing Agencia tecnológica digital';
+const canonical = Astro.props.url ? Astro.props.url : 'https://lab+sourcing.com';
 ---
 
 <html lang="es" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-    <title>Agencia Digital</title>
+    <meta name="description" content={description} />
   </head>
   <body class="bg-white text-black font-reviewcondensed">
     <!-- <Navbar /> -->
