@@ -1,0 +1,85 @@
+<div class="cursor-custom fixed top-0 left-0 pointer-events-none z-10 overflow-visible hidden md:block">
+    <svg class="overflow-visible" width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <circle cx="12.5" cy="12.5" r="12.5" stroke="black" stroke-width=".2" fill="white"></circle>
+        <text class="cursor-plus hidden font-sans" x="12.5" y="16" text-anchor="middle" font-size="12" font-weight="100" fill="black">+</text>
+    </svg>
+</div>
+
+<script>
+    import gsap from "gsap";
+
+    if (window.innerWidth >= 769) {
+        const body = document.querySelector('body');
+        const circle = document.querySelector('.cursor-custom');
+        const plusSign = document.querySelector('.cursor-plus');
+
+        const links = document.querySelectorAll('a');
+
+        window.addEventListener("mousemove", moveCircle);
+
+        gsap.set(circle, {
+            xPercent: -50,
+            yPercent: -50
+        });
+
+        function moveCircle(e) {
+            gsap.set(circle, {
+                duration: 0.2,
+                x: e.clientX,
+                y: e.clientY,
+                ease: "power2.out"
+            });
+
+            const elementUnderCursor = document.elementFromPoint(e.clientX, e.clientY);
+            
+            // Eliminar el cursor si está sobre la section contacto
+            const isOverContacto = elementUnderCursor && elementUnderCursor.closest('.contacto');
+            if (isOverContacto) {
+                gsap.to(circle, {
+                    duration: 0.3,
+                    scale: 1
+                })
+            }
+            
+            // Mostrar + si está sobre .project-custom-cursor
+            const isOverProject = elementUnderCursor && elementUnderCursor.closest('.project-custom-cursor');
+            if (isOverProject) {
+                plusSign.classList.remove('hidden');
+            } else {
+                plusSign.classList.add('hidden');
+            }
+
+            // Detectar si está dentro de .header-custom
+            const isInsideBlendZone = elementUnderCursor && elementUnderCursor.closest('.header-custom');
+
+            if (isInsideBlendZone) {
+                circle.classList.add('mix-blend-difference');
+            } else {
+                circle.classList.remove('mix-blend-difference');
+            }
+        }
+
+        function linkAnimIn() {
+            gsap.to(circle, {
+                duration: 0.3,
+                scale: 4
+            })
+        }
+
+        function linkAnimOut() {
+            gsap.to(circle, {
+                duration: 0.3,
+                scale: 1
+            })
+        }
+
+        links.forEach(link => {
+            link.addEventListener('mouseover', e => {
+                linkAnimIn();
+            });
+            link.addEventListener('mouseout', e => {
+                linkAnimOut();
+            });
+        });
+    }
+</script>

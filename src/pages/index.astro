@@ -2,21 +2,13 @@
 import Layout from '../layouts/Layout.astro';
 import Project from '../components/Project.astro';
 import Client from '../components/Client.astro';
+import Contacto from '../components/Contacto.astro';
 ---
 
 <Layout title="Welcome to Lab+sourcing">
   <main class="w-full min-h-dvh">
-    
     <Project />
-
     <Client />
-
-    <section id="contacto" class="py-24 space-y-8">
-      <div class="w-11/12 mx-auto">
-        <h2 class="text-fluid-xl font-semibold uppercase">Contacto</h2>
-        <p class="text-gray-600">Hablemos de tu próximo proyecto.</p>
-        <a href="https://wa.me/1234567890" target="_blank" class="inline-block mt-4 px-6 py-3 bg-green-500 text-white rounded hover:bg-green-600">Escríbenos por WhatsApp</a>
-      </div>
-    </section>
+    <Contacto />
   </main>
 </Layout>
