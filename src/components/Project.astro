@@ -3,21 +3,21 @@ import ProjectImage from '../assets/cemento-sol-wp.png';
 import { Image } from 'astro:assets';
 ---
 
-<section id="proyectos" class="py-24 space-y-8">
+  <section id="proyectos" class="py-24 space-y-8 relative z-[3] bg-white">
     <div class="w-11/12 mx-auto">
       <div>
-        <h2 class="text-fluid-xl font-normal mb-8">Recent projects</h2>
+        <h2 class="text-fluid-xl font-normal mb-16">Recent projects</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-custom-cursor">
-          <div class="relative aspect-4/3 bg-slate-200 rounded-3xl mb-4 overflow-hidden">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor">
+          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-cover"
+              class="object-contain object-center h-full"
             />
           </div>
           <div class="relative text-fluid-sm">
@@ -26,15 +26,49 @@ import { Image } from 'astro:assets';
             <p class="inline">Accelerating your next big discovery</p>
           </div>
         </a>
-        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-custom-cursor">
-          <div class="relative aspect-4/3 bg-slate-200 rounded-3xl mb-4 overflow-hidden">
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor md:translate-y-20">
+          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-cover"
+              class="object-contain object-center h-full"
+            />
+          </div>
+          <div class="relative text-fluid-sm">
+            <h3 class="inline font-semibold">Project title</h3>
+            <span class="inline"> — </span>
+            <p class="inline">Accelerating your next big discovery</p>
+          </div>
+        </a>
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor">
+          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+            <Image
+              src={ProjectImage}
+              alt="Project 1"
+              widths={[400, 800, 1200]}
+              formats={['webp', 'avif']}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="object-contain object-center h-full"
+            />
+          </div>
+          <div class="relative text-fluid-sm">
+            <h3 class="inline font-semibold">Cementos Sol</h3>
+            <span class="inline"> — </span>
+            <p class="inline">Accelerating your next big discovery</p>
+          </div>
+        </a>
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor md:translate-y-20">
+          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+            <Image
+              src={ProjectImage}
+              alt="Project 1"
+              widths={[400, 800, 1200]}
+              formats={['webp', 'avif']}
+              sizes="(max-width: 768px) 100vw, 50vw"
+              class="object-contain object-center h-full"
             />
           </div>
           <div class="relative text-fluid-sm">
@@ -46,3 +80,26 @@ import { Image } from 'astro:assets';
       </div>
     </div>
   </section>
+
+  <!-- <script>
+    import gsap from "gsap";
+    import ScrollTrigger from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const cards = gsap.utils.toArray('.project-card');
+    
+    cards.forEach((card, i) => {
+      gsap.to(card, {
+        y: -20 - i * 4, // progresivo sutil (como en la web de referencia)
+        ease: 'none',
+        scrollTrigger: {
+          trigger: card,
+          start: 'top bottom',
+          end: 'bottom top',
+          scrub: true,
+          // markers: true, // para debug si deseas
+        },
+      });
+    });
+  </script> -->

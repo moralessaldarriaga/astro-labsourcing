@@ -17,7 +17,6 @@ export default {
         '4xl': '4000px',
       },
       fontFamily: {
-        reviewcondensed: ['Review Condensed', 'sans-serif'],
         spaceMono: ['"Space Mono"', 'monospace'],
       },
     },

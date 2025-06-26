@@ -4,3 +4,9 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+    .will-change-clip-transform {
+        will-change: clip-path, transform;
+    }
+}
+

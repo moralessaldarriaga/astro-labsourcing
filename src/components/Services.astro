@@ -1,0 +1,71 @@
+---
+import Pexels from '../assets/image-zoom-clippath.webp';
+import { Image } from 'astro:assets';
+---
+
+<section id="servicios" class="pb-24 space-y-8 relative z-[3] bg-white">
+    <div class="w-11/12 mx-auto">
+        <div class="h-[200vh] min-h-screen relative">
+            <div class="hero-img h-[100vh] sticky top-0 overflow-hidden will-change-transform">
+                <div class="image-wrap w-full h-full overflow-clip will-change-clip-transform">
+                    <Image
+                        src={Pexels}
+                        alt="Pexels"
+                        widths={[400, 800, 1200]}
+                        formats={['webp', 'avif']}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        class="wide-image object-cover w-full h-full object-center aspect-video will-change-transform"
+                    />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    import gsap from "gsap";
+    import ScrollTrigger from 'gsap/ScrollTrigger';
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const imageWrap = document.querySelector('.image-wrap');
+    const image = document.querySelector('.wide-image');
+
+    if (imageWrap && image) {
+        const itemTL = gsap.timeline({
+            scrollTrigger: {
+                trigger: '.hero-img',
+                start: 'top top',
+                end: '+=100%',
+                scrub: 0.3,
+                // pin: true,
+                invalidateOnRefresh: true,
+            },
+        });
+
+        itemTL
+            .fromTo(
+                imageWrap,
+                { clipPath: 'inset(35%)' },
+                { clipPath: 'inset(0%)', ease: 'sine.inOut' }
+            )
+            .fromTo(
+                image,
+                { scale: 1.1 },
+                { scale: 1, ease: 'sine.inOut' },
+                0
+            );
+
+        // gsap.from('.text-wrapper h1', {
+        //   scrollTrigger: {
+        //     trigger: '.content',
+        //     start: 'top 90%',
+        //     end: 'top 60%',
+        //     scrub: 0.5,
+        //   },
+        //   y: 30,
+        //   opacity: 0,
+        //   ease: 'power2.out',
+        // });
+    }
+</script>
