@@ -8,70 +8,70 @@ import { Image } from 'astro:assets';
       <div>
         <h2 class="text-fluid-xl font-normal mb-16">Recent projects</h2>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-20">
+      <div class="project-card-block grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor">
-          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+          <div class="project-image relative bg-slate-200  mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-contain object-center h-full"
+              class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="relative text-fluid-sm">
+          <div class="project-title relative text-fluid-sm">
             <h3 class="inline font-semibold">Cementos Sol</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
         </a>
-        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor md:translate-y-20">
-          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor ">
+          <div class="project-image relative bg-slate-200  mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-contain object-center h-full"
+              class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="relative text-fluid-sm">
+          <div class="project-title relative text-fluid-sm">
             <h3 class="inline font-semibold">Project title</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
         </a>
         <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor">
-          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+          <div class="project-image relative bg-slate-200  mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-contain object-center h-full"
+              class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="relative text-fluid-sm">
+          <div class="project-title relative text-fluid-sm">
             <h3 class="inline font-semibold">Cementos Sol</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
         </a>
-        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor md:translate-y-20">
-          <div class="relative bg-slate-200 rounded-3xl mb-4 overflow-hidden aspect-square">
+        <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor ">
+          <div class="project-image relative bg-slate-200  mb-4 overflow-hidden aspect-square">
             <Image
               src={ProjectImage}
               alt="Project 1"
               widths={[400, 800, 1200]}
               formats={['webp', 'avif']}
               sizes="(max-width: 768px) 100vw, 50vw"
-              class="object-contain object-center h-full"
+              class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="relative text-fluid-sm">
+          <div class="project-title relative text-fluid-sm">
             <h3 class="inline font-semibold">Project title</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
@@ -80,26 +80,3 @@ import { Image } from 'astro:assets';
       </div>
     </div>
   </section>
-
-  <!-- <script>
-    import gsap from "gsap";
-    import ScrollTrigger from 'gsap/ScrollTrigger';
-
-    gsap.registerPlugin(ScrollTrigger);
-
-    const cards = gsap.utils.toArray('.project-card');
-    
-    cards.forEach((card, i) => {
-      gsap.to(card, {
-        y: -20 - i * 4, // progresivo sutil (como en la web de referencia)
-        ease: 'none',
-        scrollTrigger: {
-          trigger: card,
-          start: 'top bottom',
-          end: 'bottom top',
-          scrub: true,
-          // markers: true, // para debug si deseas
-        },
-      });
-    });
-  </script> -->
