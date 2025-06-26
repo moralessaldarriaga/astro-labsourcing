@@ -19,9 +19,9 @@ import { Image } from 'astro:assets';
                 </div>
             </div>
         </div>
-        <div class="pt-32 grid gap-y-8 md:gap-y-32">
+        <div class="pt-32 grid gap-y-16 md:gap-y-32">
             <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
-                <div class="services-block h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="services-card">
                         <h2 class="text-fluid-xl">Services title</h2>
                         <div class="services-text">
@@ -33,7 +33,7 @@ import { Image } from 'astro:assets';
                 </div>
             </div>
             <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
-                <div class="services-block h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div class="services-card">
                         <h2 class="text-fluid-xl">Services title</h2>
                         <div class="services-text">
@@ -57,9 +57,6 @@ import { Image } from 'astro:assets';
 
     const imageWrap = document.querySelector('.image-wrap');
     const image = document.querySelector('.wide-image');
-
-    const sectionServices = document.querySelector('.services-grid');
-    const servicesBlock = sectionServices.querySelectorAll('.services-block');
 
     if (imageWrap && image) {
         const itemTL = gsap.timeline({
@@ -99,88 +96,63 @@ import { Image } from 'astro:assets';
         // });
     }
 
-    if (servicesBlock) {
-        gsap.utils.toArray(servicesBlock).forEach((element) => {
-            gsap.fromTo(
-                element,
-                {
-                    opacity: 0,
-                    y: 150, // Aumentado de 50 a 100 para un movimiento más evidente
-                },
-                {
-                    opacity: 1,
-                    y: 0,
-                    duration: 2, // Ligeramente más larga para suavizar el efecto
-                    ease: "power3.out", // Easing más dinámico para un movimiento natural
-                    scrollTrigger: {
-                        trigger: element,
-                        start: "top 80%", // Comienza cuando el elemento está al 80% del viewport
-                        end: "bottom 20%", // Termina cuando el elemento está al 20% del viewport
-                        once: true, // Solo reproduce la animación al entrar
-                    },
-                }
-            );
-        });
-    }
+    if (window.innerWidth >= 769) {
+        document.fonts.ready.then(() => {
 
-    document.fonts.ready.then(() => {
+            const sectionServicesGrid = document.querySelectorAll('.services-grid');
 
-        const sectionServicesGrid = document.querySelectorAll('.services-grid');
+            sectionServicesGrid.forEach((sectionGrid, indexGrid) => {
 
-        sectionServicesGrid.forEach((sectionGrid, indexGrid) => {
+                const servicesBlocks = sectionGrid.querySelectorAll('.services-block');
 
-            const servicesBlocks = sectionGrid.querySelectorAll('.services-block');
+                servicesBlocks.forEach((block, index) => {
 
-            servicesBlocks.forEach((block, index) => {
-                const split = new SplitText(block.querySelector('.services-text p'), {
-                    type: "words",
-                    wordsClass: "word"
+                    const up = gsap.fromTo(
+                        block,
+                        {
+                            opacity: 0,
+                            y: 0, // Aumentado de 50 a 100 para un movimiento más evidente
+                        },
+                        {
+                            opacity: 1,
+                            y: 0,
+                            duration: 1.5, // Ligeramente más larga para suavizar el efecto
+                            ease: "sine.inOut", // Easing más dinámico para un movimiento natural
+                            scrollTrigger: {
+                                trigger: block,
+                                start: "top 80%", // Comienza cuando el elemento está al 80% del viewport
+                                end: "bottom 20%", // Termina cuando el elemento está al 20% del viewport
+                                once: true, // Solo reproduce la animación al entrar
+                            },
+                        }
+                    );
+
+                    const split = new SplitText(block.querySelector('.services-text p'), {
+                        type: "words",
+                        wordsClass: "word"
+                    });
+
+                    const tl = gsap
+                    .timeline({
+                        scrollTrigger: {
+                            trigger: sectionGrid,
+                            start: "top top",
+                            end: "+=150%",
+                            scrub: .3,
+                            pin: true,
+                            invalidateOnRefresh: true,
+                        }
+                    })
+                    .set(
+                        split.words,
+                        {
+                            opacity: 1,
+                            stagger: 0.1
+                        },
+                        0.1
+                    );
                 });
-
-                const tl = gsap
-                .timeline({
-                    scrollTrigger: {
-                        trigger: sectionGrid,
-                        start: "top top",
-                        end: "+=150%",
-                        scrub: true,
-                        pin: true
-                    }
-                })
-                .set(
-                    split.words,
-                    {
-                        opacity: 1,
-                        stagger: 0.1
-                    },
-                    0.1
-                );
             });
         });
-
-
-        /* const split = new SplitText(".services-text p", {
-            type: "words",
-            wordsClass: "word"
-        }); */
-
-        /* const tl = gsap
-        .timeline({
-            scrollTrigger: {
-                trigger: ".services-grid",
-                start: "top top",
-                end: "+=150%",
-                scrub: true,
-                pin: true
-            }
-        })
-        .set(
-            split.words,
-            {
-                opacity: 1,
-                stagger: 0.1
-            },
-            0.1
-        ); */
-    });
+    }
 </script>
