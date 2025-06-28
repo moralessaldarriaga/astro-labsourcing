@@ -3,7 +3,7 @@ import Pexels from '../assets/image-zoom-clippath.webp';
 import { Image } from 'astro:assets';
 ---
 
-<section id="servicios" class="pb-24 space-y-8 relative z-[3] bg-white">
+<section id="servicios" class="servicespb-24 space-y-8 relative z-[10] bg-white">
     <div class="w-11/12 mx-auto">
         <div class="h-[200vh] min-h-screen relative">
             <div class="hero-img h-[100vh] sticky top-0 overflow-hidden will-change-transform">
@@ -19,32 +19,66 @@ import { Image } from 'astro:assets';
                 </div>
             </div>
         </div>
-        <div class="pt-32 grid gap-y-16 md:gap-y-32">
-            <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
-                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="services-card">
-                        <h2 class="text-fluid-xl">Services title</h2>
-                        <div class="services-text">
-                            <p class="text-fluid-sm">Our process starts with strategic anchoring, grasping clients’ goals, user needs, and evaluating current products and usage data.</p>
-                        </div>
-                    </div>
-                    <div class="services-card aspect-video bg-slate-100">
-                    </div>
-                </div>
+        <div class="services-content pt-32">
+            <div class="services-title">
+                <h2 class="text-fluid-xl mb-8">Nuestros servicios</h2>
+                <p class="text-fluid-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus ab eos cum. Aliquam, tenetur voluptatem quia molestiae debitis placeat temporibus sequi itaque fugit earum magnam, harum voluptas ea obcaecati.</p>
             </div>
-            <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
-                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <div class="services-card">
-                        <h2 class="text-fluid-xl">Services title</h2>
-                        <div class="services-text">
-                            <p class="text-fluid-sm">Our process starts with strategic anchoring, grasping clients’ goals, user needs, and evaluating current products and usage data.</p>
-                        </div>
+            <div class="services-wrapper-main w-full pt-16">
+                <div class="services-wrapper w-full flex relative overflow-visible z-[2] flex-col flex-nowrap">
+                    <div class="services-card p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#0bc8a8] text-white">
+                        <h2 class="text-fluid-xl">UX & UI Design</h2>
+                        <p class="text-fluid-sm">Aterrizamos las ideas en prototipos (UX) que permitan validar todo el Journey del usuario, una vez validado nuestro equipo de trabajo le da el toque digital generando el diseño final (UI)</p>
                     </div>
-                    <div class="services-card aspect-video bg-slate-100">
+                    <div class="services-card p-5 md:p-20 sticky top-0 z-[2] min-h-[460px] bg-[#FFE200] text-black">
+                        <h2 class="text-fluid-xl">Desarrollo Web</h2>
+                        <p class="text-fluid-sm">Ejecutamos el desarrollo web con el framework mas adecuado para el proyecto, garantizando un correcto performance en su uso y las mejores prácticas de las metodologías ágiles.</p>
+                    </div>
+                    <div class="services-card p-5 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#ffffff] text-black">
+                        <h2 class="text-fluid-xl">Desarrollo de Apps</h2>
+                        <p class="text-fluid-sm">Ejecutamos esas ideas tanto para Android como iOS, nativo o híbridas, tomando la decisión de acuerdo a tu necesidad, lo que nos permite optimizar tiempos y costos.</p>
+                    </div>
+                    <div class="services-card p-5 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#FF6C01] text-black">
+                        <h2 class="text-fluid-xl">Consultoría Tecnológica</h2>
+                        <p class="text-fluid-sm">Refinamos, asesoramos y definimos tu campaña o idea de negocio garantizando cumplir con el objetivo propuesto y generando valor para tus usuarios.</p>
+                    </div>
+                    <div class="services-card px-5 py-20 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#000000] text-white">
+                        <h2 class="text-fluid-xl">Outsourcing IT</h2>
+                        <p class="text-fluid-sm">Ponemos a disposición un equipo altamente calificado de tecnología, que te permita atender cualquier necesidad en tu agencia o algún proyecto de un cliente.</p>
+                    </div>
+                    <div class="services-card p-5 py-20 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#13002f] text-white">
+                        <h2 class="text-fluid-xl">Marketing Digital</h2>
+                        <p class="text-fluid-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto nesciunt, reiciendis molestiae, odio vel quas fuga temporibus delectus animi omnis fugiat recusandae, non adipisci commodi excepturi qui ex aperiam?</p>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- <div class="pt-32 grid gap-y-16 md:gap-y-32">
+            <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
+                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="services-card">
+                        <h2 class="text-fluid-xl">UX & UI Design</h2>
+                        <div class="services-text">
+                            <p class="text-fluid-sm">Aterrizamos las ideas en prototipos (UX) que permitan validar todo el Journey del usuario, una vez validado nuestro equipo de trabajo le da el toque digital generando el diseño final (UI)</p>
+                        </div>
+                    </div>
+                    <div class="services-card aspect-video bg-slate-100">
+                    </div>
+                </div>
+            </div>
+            <div class="services-grid grid grid-cols-1 gap-y-8 md:gap-y-32">
+                <div class="services-block md:h-[100vh] justify-center items-center grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <div class="services-card">
+                        <h2 class="text-fluid-xl">Desarrollo Web</h2>
+                        <div class="services-text">
+                            <p class="text-fluid-sm">Ejecutamos el desarrollo web con el framework mas adecuado para el proyecto, garantizando un correcto performance en su uso y las mejores prácticas de las metodologías ágiles</p>
+                        </div>
+                    </div>
+                    <div class="services-card aspect-video bg-slate-100">
+                    </div>
+                </div>
+            </div>
+        </div> -->
     </div>
 </section>
 
@@ -96,63 +130,63 @@ import { Image } from 'astro:assets';
         // });
     }
 
-    if (window.innerWidth >= 769) {
-        document.fonts.ready.then(() => {
+    // if (window.innerWidth >= 769) {
+    //     document.fonts.ready.then(() => {
 
-            const sectionServicesGrid = document.querySelectorAll('.services-grid');
+    //         const sectionServicesGrid = document.querySelectorAll('.services-grid');
 
-            sectionServicesGrid.forEach((sectionGrid, indexGrid) => {
+    //         sectionServicesGrid.forEach((sectionGrid, indexGrid) => {
 
-                const servicesBlocks = sectionGrid.querySelectorAll('.services-block');
+    //             const servicesBlocks = sectionGrid.querySelectorAll('.services-block');
 
-                servicesBlocks.forEach((block, index) => {
+    //             servicesBlocks.forEach((block, index) => {
 
-                    const up = gsap.fromTo(
-                        block,
-                        {
-                            opacity: 0,
-                            y: 0, // Aumentado de 50 a 100 para un movimiento más evidente
-                        },
-                        {
-                            opacity: 1,
-                            y: 0,
-                            duration: 1.5, // Ligeramente más larga para suavizar el efecto
-                            ease: "sine.inOut", // Easing más dinámico para un movimiento natural
-                            scrollTrigger: {
-                                trigger: block,
-                                start: "top 80%", // Comienza cuando el elemento está al 80% del viewport
-                                end: "bottom 20%", // Termina cuando el elemento está al 20% del viewport
-                                once: true, // Solo reproduce la animación al entrar
-                            },
-                        }
-                    );
+    //                 const up = gsap.fromTo(
+    //                     block,
+    //                     {
+    //                         opacity: 0,
+    //                         y: 0, // Aumentado de 50 a 100 para un movimiento más evidente
+    //                     },
+    //                     {
+    //                         opacity: 1,
+    //                         y: 0,
+    //                         duration: 1.5, // Ligeramente más larga para suavizar el efecto
+    //                         ease: "sine.inOut", // Easing más dinámico para un movimiento natural
+    //                         scrollTrigger: {
+    //                             trigger: block,
+    //                             start: "top 80%", // Comienza cuando el elemento está al 80% del viewport
+    //                             end: "bottom 20%", // Termina cuando el elemento está al 20% del viewport
+    //                             once: true, // Solo reproduce la animación al entrar
+    //                         },
+    //                     }
+    //                 );
 
-                    const split = new SplitText(block.querySelector('.services-text p'), {
-                        type: "words",
-                        wordsClass: "word"
-                    });
+    //                 const split = new SplitText(block.querySelector('.services-text p'), {
+    //                     type: "words",
+    //                     wordsClass: "word"
+    //                 });
 
-                    const tl = gsap
-                    .timeline({
-                        scrollTrigger: {
-                            trigger: sectionGrid,
-                            start: "top top",
-                            end: "+=150%",
-                            scrub: .3,
-                            pin: true,
-                            invalidateOnRefresh: true,
-                        }
-                    })
-                    .set(
-                        split.words,
-                        {
-                            opacity: 1,
-                            stagger: 0.1
-                        },
-                        0.1
-                    );
-                });
-            });
-        });
-    }
+    //                 const tl = gsap
+    //                 .timeline({
+    //                     scrollTrigger: {
+    //                         trigger: sectionGrid,
+    //                         start: "top top",
+    //                         end: "+=150%",
+    //                         scrub: .3,
+    //                         pin: true,
+    //                         invalidateOnRefresh: true,
+    //                     }
+    //                 })
+    //                 .set(
+    //                     split.words,
+    //                     {
+    //                         opacity: 1,
+    //                         stagger: 0.1
+    //                     },
+    //                     0.1
+    //                 );
+    //             });
+    //         });
+    //     });
+    // }
 </script>
