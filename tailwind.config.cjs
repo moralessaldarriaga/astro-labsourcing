@@ -17,6 +17,7 @@ export default {
         '4xl': '4000px',
       },
       fontFamily: {
+        caustenRounded: ['"Causten"', 'sans-serif'],
         spaceMono: ['"Space Mono"', 'monospace'],
       },
     },

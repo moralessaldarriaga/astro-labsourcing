@@ -1,6 +1,6 @@
-<footer id="contacto" class="contacto bg-[#13002f] sticky inset-0 z-[0] will-change-transform">
+<footer id="contacto" class="contacto bg-[#13002f] relative will-change-transform">
     <div class="w-11/12 mx-auto min-h-screen py-8 flex flex-col justify-center items-start">
-        <h2 class="text-fluid-lg font-semibold uppercase text-white">Your next big idea starts here. <br>Work together?</h2>
+        <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8 text-white leading-tight">Your next big idea starts here. <br>Work together?</h2>
         <a href="https://api.whatsapp.com/send/?phone=%2B51997151130&text&type=phone_number&app_absent=0" target="_blank" id="clickWhatsapp" hoverstagger="link" class="flex items-center gap-4 text-fluid-base text-white hover:underline">
             <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none">
                 <path d="M5 12h14M13 5l7 7-7 7" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -8,7 +8,7 @@
             Let's make it real! Escríbenos por WhatsApp
         </a>
         <a href="/" class="w-full header-custom">
-            <svg class="text-[clamp(2rem,10vw,10vw)] leading-none overflow-hidden w-full mt-20" viewBox="0 0 86 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg class="text-[clamp(2rem,10vw,10vw)] leading-none overflow-hidden w-full mt-20" viewBox="0 0 86 9" fill="none" xmlns="http://www.w3.org/2000/svg" data-animate-footer>
                 <path d="M0.47998 8.00001V0.200012H2.45998V6.20001H5.89198V8.00001H0.47998Z" fill="white"/>
                 <path d="M6.495 8.00001L9.627 0.200012H11.127L14.259 8.00001H12.159L11.823 7.13601H8.93099L8.595 8.00001H6.495ZM9.615 5.33601H11.127L10.371 3.36801L9.615 5.33601Z" fill="white"/>
                 <path d="M14.9761 8.00001V0.200012H18.6481C19.8481 0.200012 20.9761 0.980012 20.9761 2.48001C20.9761 3.17601 20.7361 3.65601 20.3521 3.96801C20.8921 4.30401 21.2641 4.86801 21.2641 5.68401C21.2641 7.17201 20.0281 8.00001 18.8281 8.00001H14.9761ZM16.9561 3.18801H18.3001C18.6841 3.18801 18.9361 2.97201 18.9361 2.58801C18.9361 2.20401 18.6841 2.00001 18.3001 2.00001H16.9561V3.18801ZM16.9561 6.20001H18.5041C18.9601 6.20001 19.2241 5.88801 19.2241 5.50401C19.2241 5.12001 18.9361 4.80801 18.5041 4.80801H16.9561V6.20001Z" fill="white"/>
@@ -25,3 +25,31 @@
         </a>
     </div>
 </footer>
+
+<script>
+    import gsap from "gsap";
+    import ScrollTrigger from 'gsap/ScrollTrigger';
+    import SplitText from "gsap/SplitText";
+
+    window.addEventListener("DOMContentLoaded", () => {
+        const element = document.querySelector("[data-animate-footer]");
+        const paths = element.querySelectorAll("path");
+
+        gsap.set(paths, { y: "150%", opacity: 1 });
+
+        gsap.to(paths, {
+            y: "0%",
+            opacity: 1,
+            duration: 0.5,
+            ease: "power3.out",
+            stagger: 0.10,
+            scrollTrigger: {
+                trigger: element,
+                start: "top 80%",
+                end: "top 20%",
+                toggleActions: "play reverse play reverse",
+            },
+        });
+    });
+
+</script>

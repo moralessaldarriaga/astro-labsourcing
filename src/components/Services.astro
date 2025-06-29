@@ -6,7 +6,7 @@ import { Image } from 'astro:assets';
 <section id="servicios" class="servicespb-24 space-y-8 relative z-[10] bg-white">
     <div class="w-11/12 mx-auto">
         <div class="h-[200vh] min-h-screen relative">
-            <div class="hero-img h-[100vh] sticky top-0 overflow-hidden will-change-transform">
+            <div class="hero-img h-[100vh] overflow-hidden will-change-transform">
                 <div class="image-wrap w-full h-full overflow-clip will-change-clip-transform">
                     <Image
                         src={Pexels}
@@ -21,34 +21,130 @@ import { Image } from 'astro:assets';
         </div>
         <div class="services-content pt-32">
             <div class="services-title">
-                <h2 class="text-fluid-xl mb-8">Nuestros servicios</h2>
+                <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Nuestros servicios</h2>
                 <p class="text-fluid-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi possimus ab eos cum. Aliquam, tenetur voluptatem quia molestiae debitis placeat temporibus sequi itaque fugit earum magnam, harum voluptas ea obcaecati.</p>
             </div>
             <div class="services-wrapper-main w-full pt-16">
                 <div class="services-wrapper w-full flex relative overflow-visible z-[2] flex-col flex-nowrap">
-                    <div class="services-card p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#0bc8a8] text-white">
-                        <h2 class="text-fluid-xl">UX & UI Design</h2>
-                        <p class="text-fluid-sm">Aterrizamos las ideas en prototipos (UX) que permitan validar todo el Journey del usuario, una vez validado nuestro equipo de trabajo le da el toque digital generando el diseño final (UI)</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#0bc8a8] text-white">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_UX & UI Design</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Aterrizamos las ideas en prototipos (UX) que permitan validar todo el Journey del usuario, una vez validado nuestro equipo de trabajo le da el toque digital generando el diseño final (UI)</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● User Research</li>
+                                        <li>● Wireframes & Prototyping</li>
+                                        <li>● Design System</li>
+                                        <li>● UX Design</li>
+                                        <li>● Mobile APP</li>
+                                        <li>● Web App Design</li>
+                                        <li>● Interaction Design</li>
+                                        <li>● Landing Page</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
-                    <div class="services-card p-5 md:p-20 sticky top-0 z-[2] min-h-[460px] bg-[#FFE200] text-black">
-                        <h2 class="text-fluid-xl">Desarrollo Web</h2>
-                        <p class="text-fluid-sm">Ejecutamos el desarrollo web con el framework mas adecuado para el proyecto, garantizando un correcto performance en su uso y las mejores prácticas de las metodologías ágiles.</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#FFE200] text-black">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Desarrollo Web</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Ejecutamos el desarrollo web con el framework mas adecuado para el proyecto, garantizando un correcto performance en su uso y las mejores prácticas de las metodologías ágiles.</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● Laravel</li>
+                                        <li>● Wordpress</li>
+                                        <li>● React</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
-                    <div class="services-card p-5 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#ffffff] text-black">
-                        <h2 class="text-fluid-xl">Desarrollo de Apps</h2>
-                        <p class="text-fluid-sm">Ejecutamos esas ideas tanto para Android como iOS, nativo o híbridas, tomando la decisión de acuerdo a tu necesidad, lo que nos permite optimizar tiempos y costos.</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#ffffff] text-black">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Desarrollo de Apps</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Ejecutamos esas ideas tanto para Android como iOS, nativo o híbridas, tomando la decisión de acuerdo a tu necesidad, lo que nos permite optimizar tiempos y costos.</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● Android</li>
+                                        <li>● i0s</li>
+                                        <li>● React Native</li>
+                                        <li>● Flutter</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
-                    <div class="services-card p-5 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#FF6C01] text-black">
-                        <h2 class="text-fluid-xl">Consultoría Tecnológica</h2>
-                        <p class="text-fluid-sm">Refinamos, asesoramos y definimos tu campaña o idea de negocio garantizando cumplir con el objetivo propuesto y generando valor para tus usuarios.</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#FF6C01] text-black">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Realidad Aumentada</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Generamos filtros para Instagram, Facebook y Tik Tok que te permitan tener mayor interacción con tus usuarios, lanzar tu campaña o sólo para que tu audiencia se divierta con ideas creativas.</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● Laravel</li>
+                                        <li>● Wordpress</li>
+                                        <li>● React</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
-                    <div class="services-card px-5 py-20 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#000000] text-white">
-                        <h2 class="text-fluid-xl">Outsourcing IT</h2>
-                        <p class="text-fluid-sm">Ponemos a disposición un equipo altamente calificado de tecnología, que te permita atender cualquier necesidad en tu agencia o algún proyecto de un cliente.</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#000000] text-white">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Consultoría Tecnológica</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Refinamos, asesoramos y definimos tu campaña o idea de negocio garantizando cumplir con el objetivo propuesto y generando valor para tus usuarios.</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● Laravel</li>
+                                        <li>● Wordpress</li>
+                                        <li>● React</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
-                    <div class="services-card p-5 py-20 md:p-20 sticky top-0 z-[3] min-h-[460px] bg-[#13002f] text-white">
-                        <h2 class="text-fluid-xl">Marketing Digital</h2>
-                        <p class="text-fluid-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit architecto nesciunt, reiciendis molestiae, odio vel quas fuga temporibus delectus animi omnis fugiat recusandae, non adipisci commodi excepturi qui ex aperiam?</p>
+                    <div class="services-card flex justify-between p-5 py-20 md:p-20 sticky top-0 z-[1] min-h-[460px] bg-[#13002f] text-white">
+                        <div class="services-card-text">
+                            <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">_Outsourcing IT</h2>
+                            <div class="services-card-info max-w-xl w-full flex flex-col gap-8">
+                                <div class="services-card-text">
+                                    <p class="text-fluid-xs">Ponemos a disposición un equipo altamente calificado de tecnología, que te permita atender cualquier necesidad en tu agencia o algún proyecto de un cliente.</p>
+                                </div>
+                                <div class="services-card-list">
+                                    <ol class="flex flex-row flex-wrap gap-y-2 gap-x-4">
+                                        <li>● Laravel</li>
+                                        <li>● Wordpress</li>
+                                        <li>● React</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="services-card-image max-w-96 w-full aspect-square bg-slate-100">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -99,7 +195,7 @@ import { Image } from 'astro:assets';
                 start: 'top top',
                 end: '+=100%',
                 scrub: 0.3,
-                // pin: true,
+                pin: true,
                 invalidateOnRefresh: true,
             },
         });
@@ -116,18 +212,6 @@ import { Image } from 'astro:assets';
                 { scale: 1, ease: 'sine.inOut' },
                 0
             );
-
-        // gsap.from('.text-wrapper h1', {
-        //   scrollTrigger: {
-        //     trigger: '.content',
-        //     start: 'top 90%',
-        //     end: 'top 60%',
-        //     scrub: 0.5,
-        //   },
-        //   y: 30,
-        //   opacity: 0,
-        //   ease: 'power2.out',
-        // });
     }
 
     // if (window.innerWidth >= 769) {

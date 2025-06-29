@@ -19,12 +19,12 @@ const canonical = Astro.props.url ? Astro.props.url : 'https://lab+sourcing.com'
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    <!-- <link rel="preload" href="/fonts/ReviewCondensed-Bold.woff2" as="font" type="font/woff2" crossorigin/> -->
+    <link rel="preload" href="/fonts/CaustenRounded/Causten-Black.woff2" as="font" type="font/woff2" crossorigin/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
   </head>
-  <body class="bg-white text-black font-spaceMono cursor-auto md:cursor-none">
+  <body class="bg-white text-black antialiased font-spaceMono cursor-auto md:cursor-none relative flex flex-col min-h-screen">
     <Cursor />
     <Header />
     <slot />
