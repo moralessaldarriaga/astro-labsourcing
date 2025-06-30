@@ -3,13 +3,13 @@ import ProjectImage from '../assets/cemento-sol-wp.png';
 import { Image } from 'astro:assets';
 ---
 
-  <section id="proyectos" class="py-24 space-y-8 relative z-[10] bg-white">
+  <section id="proyectos" class="py-32 space-y-8 relative z-[10] bg-white">
     <div class="w-11/12 mx-auto">
-      <div class="mb-16">
-        <h2 class="font-caustenRounded uppercase italic font-bold text-fluid-xl mb-8">Recent projects</h2>
-        <p class="text-fluid-sm">We turn ideas into vision, blending design and technology into meaningful solution</p>
+      <div class="mb-32">
+        <h2 class="font-caustenRounded uppercase italic font-bold text-4xl lg:text-fluid-xl lg:leading-normal mb-8 text-fadeIn">_Recent projects</h2>
+        <p class="text-base lg:text-fluid-xs lg:leading-normal text-opacity">We turn ideas into vision, blending design and technology into meaningful solution</p>
       </div>
-      <div class="project-card-block grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-32">
+      <div class="project-card-block grid grid-cols-1 md:grid-cols-2 gap-x-20 gap-y-24">
         <a href="https://www.cementosol.com.pe/" target="_blank" class="project-card project-custom-cursor">
           <div class="project-image relative bg-slate-200  mb-4 overflow-hidden aspect-square">
             <Image
@@ -21,8 +21,8 @@ import { Image } from 'astro:assets';
               class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="project-title relative text-fluid-sm">
-            <h3 class="inline font-semibold">Cementos Sol</h3>
+          <div class="project-title relative text-base lg:text-fluid-xs lg:leading-normal text-opacity">
+            <h3 class="font-caustenRounded inline font-semibold uppercase italic">_Cementos Sol</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
@@ -38,8 +38,8 @@ import { Image } from 'astro:assets';
               class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="project-title relative text-fluid-sm">
-            <h3 class="inline font-semibold">Project title</h3>
+          <div class="project-title relative text-base lg:text-fluid-xs lg:leading-normal text-opacity">
+            <h3 class="font-caustenRounded inline font-semibold uppercase italic">_Project title</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
@@ -55,8 +55,8 @@ import { Image } from 'astro:assets';
               class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="project-title relative text-fluid-sm">
-            <h3 class="inline font-semibold">Cementos Sol</h3>
+          <div class="project-title relative text-base lg:text-fluid-xs lg:leading-normal text-opacity">
+            <h3 class="font-caustenRounded inline font-semibold uppercase italic">_Cementos Sol</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
@@ -72,8 +72,8 @@ import { Image } from 'astro:assets';
               class="object-contain object-center h-full hover:scale-110 transition-transform duration-300 ease-in-out"
             />
           </div>
-          <div class="project-title relative text-fluid-sm">
-            <h3 class="inline font-semibold">Project title</h3>
+          <div class="project-title relative text-base lg:text-fluid-xs lg:leading-normal text-opacity">
+            <h3 class="font-caustenRounded inline font-semibold uppercase italic">_Project title</h3>
             <span class="inline"> — </span>
             <p class="inline">Accelerating your next big discovery</p>
           </div>
@@ -81,3 +81,46 @@ import { Image } from 'astro:assets';
       </div>
     </div>
   </section>
+
+  <script>
+    import gsap from "gsap";
+    import ScrollTrigger from 'gsap/ScrollTrigger'
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const sectionProjects = document.querySelector('#proyectos');
+    const textFadeIn = sectionProjects.querySelectorAll('.text-fadeIn');
+    const textOpacity = sectionProjects.querySelectorAll('.text-opacity');
+
+    gsap.utils.toArray(textOpacity).forEach((el) => {
+        gsap.fromTo(el,
+            {
+                opacity: 0
+            },
+            {
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play reverse play reverse"
+            },
+                opacity: 1,
+                duration: 1.5,
+                ease: "sine.inOut"
+            }
+        );
+    });
+
+    gsap.utils.toArray(textFadeIn).forEach((el) => {
+        gsap.from(el, {
+            scrollTrigger: {
+                trigger: el,
+                start: "top 80%",
+                toggleActions: "play reverse play reverse",
+            },
+            y: 50,
+            opacity: 0,
+            duration: 1,
+            ease: "power2.out"
+        });
+    });
+  </script>
